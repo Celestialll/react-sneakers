@@ -1,30 +1,26 @@
+import Card from './components/Card';
+import Header from './components/Header';
+import Drawer from './components/Drawer';
 
 function App() {
   return (
     <div className="wrapper clear">
-       <header className="d-flex justify-between align-center p-40">
-         <div className="d-flex align-center">
-           <img className="mr-15" width={40} height={40} src="/images/logo.svg" alt="" />
-           <div>
-             <h3 className="text-uppercase">React Sneakers</h3>
-            <p className="opacity-5">Магазин лучших кроссовок</p>
-           </div>
-         </div>
-         <ul className="d-flex">
-           <li className="mr-30 d-flex align-center">
-             <img width={18} height={18} src="/images/cart.svg" alt="" />
-             <span>1500 руб.</span>
-           </li>
-           <li>
-             <img width={18} height={18} src="/images/user.svg" alt="" />
-
-           </li>
-         </ul>
-       </header>
+      <Drawer />
+      <Header />
        <div className="cotent p-40">
-         <h1 className="mb-40">Все кроссовки</h1>
+       <div className="d-flex justify-between align-center mb-40">
+          <h1 className="">Все кроссовки</h1>
+          <div className="search-block d-flex align-center">
+            <img className="mr-15" src="/images/search.svg" alt="Search" />
+            <input type="text" placeholder="Поиск" />
+          </div>
+          </div>
          <div className="sneakers-list d-flex">
+           <Card />
          <div className="card">
+           <div className="favorite">
+             <img src="/images/heart-white.svg" alt="Unliked" />
+           </div>
            <img width={133} height={112} src="/images/sneakers/item-1.jpg" alt="" />
            <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
            <div className="d-flex justify-between align-center">
